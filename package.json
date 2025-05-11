@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "DWLR JSON Server mock API",
   "dependencies": {
-    "cors": "2.8.5",
-    "json-server": "1.0.0-beta.3"
+    "cors": "^2.8.5",
+    "json-server": "^1.0.0-beta.3"
   }
 }
