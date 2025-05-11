@@ -1,10 +1,18 @@
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8080; //  chose port from here like 8080, 3001
+try {
+  const jsonServer = require('json-server');
+  console.log('json-server loaded successfully');
+  const server = jsonServer.create();
+  const router = jsonServer.router('db.json');
+  const middlewares = jsonServer.defaults();
+  const port = process.env.PORT || 8080;
 
-server.use(middlewares);
-server.use(router);
+  server.use(middlewares);
+  server.use(router);
 
-server.listen(port);
+  server.listen(port, () => {
+    console.log(`JSON Server is running on port ${port}`);
+  });
+} catch (error) {
+  console.error('Failed to load json-server:', error);
+  process.exit(1);
+}
