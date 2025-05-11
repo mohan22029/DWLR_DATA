@@ -1,4 +1,5 @@
-"DWLR_DATA"[
+{
+  "DWLR_DATA"[
   {
     "S.No": 1,
     "Telemetry_UID": "CGWKOL0165",
@@ -204,3 +205,4 @@
     "Anomaly": "Normal"
   }
 ]
+}
