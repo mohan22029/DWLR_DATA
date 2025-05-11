@@ -1,4 +1,5 @@
 try {
+  console.log('Node.js module paths:', module.paths);
   const jsonServer = require('json-server');
   console.log('json-server loaded successfully');
   const server = jsonServer.create();
@@ -10,7 +11,7 @@ try {
   server.use(router);
 
   server.listen(port, () => {
-    console.log('JSON Server is running on port ${port}');
+    console.log(JSON Server is running on port ${port});
   });
 } catch (error) {
   console.error('Failed to load json-server:', error);
